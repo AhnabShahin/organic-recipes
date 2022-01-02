@@ -3,10 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Route
 } from "react-router-dom";
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
