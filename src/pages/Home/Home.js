@@ -10,9 +10,9 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Waffles></Waffles>
-            <FoodCompanySlider/>
-            
-     
+            <FoodCompanySlider />
+
+
         </div>
     );
 };

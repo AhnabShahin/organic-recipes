@@ -1,3 +1,5 @@
+import * as types from "../actions/actionTypes";
+
 // User reducer for user State management
 const initialState = {
     loading: false,
@@ -7,6 +9,11 @@ const initialState = {
 
 const userReducer=(state=initialState, action)=>{
     switch(action.type){
+        case types.USER_LOADING:
+            return{
+                ...state,
+                loading: true
+            }
         default:
             return state;
     }
