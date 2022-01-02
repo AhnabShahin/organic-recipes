@@ -1,0 +1,53 @@
+[
+    {
+       " id":1,
+        "name":"Quick and easy flaky pastry for tasty breakfast",
+       " img":"../images/burger (1).png",
+       " describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+    },
+    {
+       " id":2,
+       " name":"Maggie’s baked flax seed granola recipe",
+       " img":"../images/burger (1).png",
+        "describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+    },
+    {
+        " id":3,
+         "name":"Quick and easy flaky pastry for tasty breakfast",
+        " img":"../images/burger (1).png",
+        " describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     },
+     {
+        " id":4,
+        " name":"Maggie’s baked flax seed granola recipe",
+        " img":"../images/burger (1).png",
+         "describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     },
+     {
+        " id":5,
+         "name":"Quick and easy flaky pastry for tasty breakfast",
+        " img":"../images/burger (1).png",
+        " describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     },
+     
+     {
+        " id":6,
+         "name":"Quick and easy flaky pastry for tasty breakfast",
+        " img":"../images/burger (1).png",
+        " describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     },
+     {
+        " id":7,
+        " name":"Maggies baked flax seed granola recipe",
+        " img":"../images/burger (1).png",
+         "describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     },
+     {
+        " id":8,
+        " name":"Maggie’s baked flax seed granola recipe",
+        " img":"../images/burger (1).png",
+         "describe":"Lorem ipsum dolor sit amet, consec tetuipisicing elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqut enim ad minim veniamquis nostrud exercitation ullamco oris nisi ut aliquip ex ea commodnsequat. Duis auolor in reprehenderit in voluptate velit esse cillum"
+     }
+    
+   
+]

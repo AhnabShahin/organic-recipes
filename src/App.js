@@ -8,7 +8,6 @@ import {
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer';
-import AuthProvider from './context/AuthProvider';
 import Header from './pages/Shared/Header/Header';
 
 
@@ -16,7 +15,7 @@ import Header from './pages/Shared/Header/Header';
 function App() {
   return (
     <div className="App">
-     <AuthProvider>
+     
      <Router>
      <Header></Header>
        <Routes>
@@ -28,7 +27,7 @@ function App() {
        </Routes>
        <Footer></Footer>
       </Router>
-     </AuthProvider>
+   
     </div>
   );
 }
