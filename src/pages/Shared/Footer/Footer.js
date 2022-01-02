@@ -50,10 +50,10 @@ const Footer = () => {
               <div className="footer-menu-container">
                 <ul>
                   <li className="footer-menu">Home</li>
-                  <li className="footer-menu">Products</li>
-                  <li className="footer-menu">Purchase</li>
-                  <li className="footer-menu">Contact us</li>
-                  <li className="footer-menu"> About us</li>
+                  <li className="footer-menu">Recipes</li>
+                  <li className="footer-menu">Shop</li>
+                  <li className="footer-menu">About</li>
+                  <li className="footer-menu"> Contact</li>
                 </ul>
               </div>
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
                   </div> 
                   <div>
                     <p>
-                      Motijil, Dhaaka, Bangladesh,
+                      Motijil, Dhaka, Bangladesh,
                       <br /> 102 1st Avenue, Dhaka NY 100
                     </p>
                   </div>

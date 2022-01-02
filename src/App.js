@@ -8,18 +8,27 @@ import {
 import Home from './pages/Home/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 import Footer from './pages/Shared/Footer/Footer';
+import AuthProvider from './context/AuthProvider';
+import Header from './pages/Shared/Header/Header';
+
+
 
 function App() {
   return (
     <div className="App">
-      <Router>
+     <AuthProvider>
+     <Router>
+     <Header></Header>
        <Routes>
          <Route path="/" element={<Home/>}></Route>
          <Route path="/home" element={<Home/>}></Route>
+        
          <Route path= "*" element={<NotFound/>}></Route>
-         <Route path="/footer" element={<Footer/>}></Route>
+         
        </Routes>
+       <Footer></Footer>
       </Router>
+     </AuthProvider>
     </div>
   );
 }
