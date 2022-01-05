@@ -5,7 +5,7 @@ const Waffles = () => {
     return (
         <div className='row my-5 mx-5'>
             <div className='col-lg-6'>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/lypGLHSpWa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/lypGLHSpWa0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             <div className='col-lg-6 text-lg-start paragraph'>
                 <h1>Perfect homemade waffles</h1>

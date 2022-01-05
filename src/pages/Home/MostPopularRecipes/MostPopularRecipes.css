@@ -1,0 +1,33 @@
+
+.hr-style span::before
+{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    top: -.5rem;
+    height: 2px;
+    background-color:#3c745d;
+    
+}
+.hr-style span::after{
+    content: "";
+    position: absolute; 
+    width: 100%;
+    bottom: -.5rem;
+    left: 0;
+    height: 2px;
+    background-color:#3c745d;
+}
+.hr-style span{
+    position: relative;
+}
+.hr-style{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.most-popular-recipes-section{
+    padding: 2rem 0;
+    margin-top: 1rem;
+}

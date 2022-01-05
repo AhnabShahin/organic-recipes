@@ -1,0 +1,26 @@
+.recipes-books-section{
+    background-image: url("../../../images/recipe-books-cover.jpg"); 
+    background-color: #cccccc; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding: 2rem 0;
+}
+.recipes-books{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.recipes-books img{
+    width: 10rem;
+    cursor: pointer;
+}
+.recipes-books-container-details p{
+    margin: 1rem 5px;
+    color: #7A7A7A;
+    font-size: 14px;
+    font-weight: 300;
+}
+.recipes-books-container-details h3{
+  text-align: center;
+}
