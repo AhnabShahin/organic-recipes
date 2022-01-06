@@ -56,8 +56,25 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/about">ABOUT</Nav.Link>
               <Nav.Link as={HashLink} to="/contact">CONTACT</Nav.Link>
 
-              {user ? <><Nav.Link as={HashLink} className='capitalize' to="/profile">{user.displayName}</Nav.Link>
-                <Button onClick={handleLogout} variant="secondary">Logout</Button></> : ''
+              {user?.role == 'author' ?
+                <>
+                  <Nav.Link as={HashLink} className='capitalize' to="/profile">{user.displayName}</Nav.Link>
+                  <Button as={HashLink} className='capitalize' to="/author-dashboard" variant="secondary">Dashboard</Button>
+                  <Button onClick={handleLogout} className='capitalize ms-3' variant="secondary">Logout</Button>
+                </> : ''
+              }
+              {user?.role == 'admin' ?
+                <>
+                  <Nav.Link as={HashLink} className='capitalize' to="/profile">{user.displayName}</Nav.Link>
+                  <Button as={HashLink} className='capitalize' to="/admin-dashboard" variant="secondary">Dashboard</Button>
+                  <Button onClick={handleLogout} className='capitalize ms-3' variant="secondary">Logout</Button>
+                </> : ''
+              }
+              {!user?
+                <>
+                  <Button as={HashLink} className='capitalize'  variant="secondary" to="/login">login</Button>
+                  <Button as={HashLink} className='capitalize ms-3' variant="secondary" to="/registration">registration</Button>
+                </> : ''
               }
 
 
