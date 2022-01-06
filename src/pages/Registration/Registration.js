@@ -37,7 +37,7 @@ const Registration = () => {
                     role: 'user'
                 }
                 async function postUserData(data) {
-                    await axios.post('http://localhost:5000/user', data)
+                    await axios.post('https://organic-recipes.herokuapp.com/user', data)
                         .then(() => {
                             navigate(redirect_URL)
                         })
@@ -50,7 +50,7 @@ const Registration = () => {
             delete data.confirmPassword;
             const newUser = { email: data.email, password: data.password, displayName: data.displayName, photoURL: data.photoURL, role: 'user' }
             async function postUserData(newUser) {
-                await axios.post('http://localhost:5000/user', newUser).then(res => {
+                await axios.post('https://organic-recipes.herokuapp.com/user', newUser).then(res => {
                     createUserWithEmailAndPassword(auth, newUser.email, newUser.password)
                         .then((userCredential) => {
                             dispatch(userLoading());

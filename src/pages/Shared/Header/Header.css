@@ -1,1 +1,13 @@
 /* css for header */
+.navbar{
+    background-color: #3c745dd9;
+}
+.navbar-light
+.navbar-brand,
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+}
+.navbar-nav{
+    align-items: center;
+
+}

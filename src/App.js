@@ -19,6 +19,9 @@ import { googleJoin, removeUser, userLoading } from './redux/actions/actions';
 import { Spinner } from 'react-bootstrap';
 import Registration from './pages/Registration/Registration';
 import AuthorDashboard from './pages/Author/AuthorDashboard/AuthorDashboard';
+import AdminDashboard from './pages/Admin/AdminDashboard/AdminDashboard';
+import AuthorRoute from './pages/Author/AuthorRoute/AuthorRoute';
+import HideRoute from './pages/HideRoute/HideRoute';
 
 
 
@@ -33,7 +36,7 @@ function App() {
       if (user) {
         const data = { email: user.email }
         async function postUserData(data) {
-          await axios.post('http://localhost:5000/user', data)
+          await axios.post('https://organic-recipes.herokuapp.com/user', data)
             .then((res) => {
               console.log(res.data)
               dispatch(googleJoin(res.data));
@@ -60,9 +63,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/home" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/registration" element={<Registration />}></Route>
-          <Route path="/user-dashboard/*" element={<AuthorDashboard/>}></Route>
+          <Route path="/login" element={<HideRoute><Login /></HideRoute>}></Route>
+          <Route path="/registration" element={<HideRoute><Registration /></HideRoute>}></Route>
+          <Route path="/author-dashboard/*" element={<AuthorRoute><AuthorDashboard /></AuthorRoute>}></Route>
+          <Route path="/admin-dashboard/*" element={<AdminDashboard />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
         <Footer></Footer>

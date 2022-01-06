@@ -5,3 +5,4 @@ export const USER_LOADED='USER_LOADED';
 export const USER_HAVE='USER_HAVE';
 export const REMOVE_USER='REMOVE_USER';
 export const USER_LOGGEDIN='USER_LOGGEDIN';
+export const BLOGS='BLOGS';

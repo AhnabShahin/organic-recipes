@@ -7,7 +7,7 @@ const AddCategory = (props) => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const onSubmit = data => {
         async function postCategory(data) {
-            await axios.post('http://localhost:5000/add-category', data).then(res => {
+            await axios.post('https://organic-recipes.herokuapp.com/add-category', data).then(res => {
                 setMassage(res.data);
             });
         }

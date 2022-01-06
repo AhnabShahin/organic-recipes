@@ -36,7 +36,7 @@ const Login = () => {
                     role: 'user'
                 }
                 async function postUserData(data) {
-                    await axios.post('http://localhost:5000/user', data)
+                    await axios.post('https://organic-recipes.herokuapp.com/user', data)
                         .then(()=>{
                             navigate(redirect_URL)
                         })

@@ -3,7 +3,7 @@ import { FaCalendar } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom';
 import {Navigation} from 'react-minimal-side-navigation';
 
-const AuthorSidebar = () => {
+const AdminSidebar = () => {
     const navigate = useNavigate();
     return (
         <Navigation
@@ -28,18 +28,18 @@ const AuthorSidebar = () => {
                 elemBefore: () => <FaCalendar />,
             },
             {
-                title: 'Blogs',
-                itemId: 'all-blogs',
+                title: 'Services',
+                itemId: 'all-services',
                 elemBefore: () => <FaCalendar />,
                 subNav: [
                     {
-                        title: 'All Blogs',
-                        itemId: `all-blogs`,
+                        title: 'All Services',
+                        itemId: `all-services`,
                         elemBefore: () => <FaCalendar />,
                     },
                     {
-                        title: 'Add Blog',
-                        itemId: 'add-blog',
+                        title: 'Add Service',
+                        itemId: 'add-service',
                         elemBefore: () =><FaCalendar />,
                     },
                 ],
@@ -72,8 +72,8 @@ const AuthorSidebar = () => {
                 elemBefore: () =><FaCalendar />,
             },
             {
-                title: 'Books',
-                itemId: 'all-books',
+                title: 'Blog',
+                itemId: 'all-posts',
                 elemBefore: () => <FaCalendar />,
                 subNav: [
                     {
@@ -114,4 +114,4 @@ const AuthorSidebar = () => {
     );
 };
 
-export default AuthorSidebar;
+export default AdminSidebar;

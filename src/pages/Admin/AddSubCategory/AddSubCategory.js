@@ -11,7 +11,7 @@ const AddSubCategory = (props) => {
     
     useEffect(() => {
         async function getCategory(data) {
-            await axios.get('http://localhost:5000/get-categories', data).then(res => {
+            await axios.get('https://organic-recipes.herokuapp.com/get-categories', data).then(res => {
                 setCategory(res.data);
             });
         } 
@@ -19,7 +19,7 @@ const AddSubCategory = (props) => {
     }, [categoryAdded])
     const subCategorySubmit = data => {
         async function postSubCategory(updated_category) {
-            await axios.post('http://localhost:5000/add-subCategory', updated_category).then(res => {
+            await axios.post('https://organic-recipes.herokuapp.com/add-subCategory', updated_category).then(res => {
                 setMassage(res.data);
             });
         }

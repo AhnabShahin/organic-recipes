@@ -1,0 +1,10 @@
+.Waffles-title h3{
+    color: #3c745d;
+}
+.Waffles-title p{
+    margin: 1rem 0px;
+    color: #7A7A7A;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: justify;
+}

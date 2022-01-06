@@ -15,3 +15,9 @@ export const googleJoin = (user) => {
         payload: user
     }
 }
+export const loadBlogs = (blogs) => {
+    return {
+        type: types.BLOGS,
+        payload: blogs
+    }
+}

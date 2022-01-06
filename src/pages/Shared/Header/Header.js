@@ -5,6 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 import { signOut, getAuth } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { userLoading } from './../../../redux/actions/actions';
+import './Header.css'
 
 const Header = () => {
   const user = useSelector(state => state.user.currentUser)
@@ -18,14 +19,14 @@ const Header = () => {
   }
   return (
     <>
-      <Navbar fixed="top" bg="light" expand="lg">
+      <Navbar sticky="top" expand="lg">
         <Container>
           <Navbar.Brand href="#home">Organic Recipes</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="ms-auto">
 
-              <NavDropdown title="HOME" id="basic-nav-dropdown">
+              <NavDropdown title="Home" id="basic-nav-dropdown">
                 <NavDropdown.Item as={HashLink} to="/home#home"> Main Home</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Personal Blog</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Organic Recipes</NavDropdown.Item>
@@ -55,8 +56,8 @@ const Header = () => {
               <Nav.Link as={HashLink} to="/about">ABOUT</Nav.Link>
               <Nav.Link as={HashLink} to="/contact">CONTACT</Nav.Link>
 
-              {user ? <><Nav.Link as={HashLink} to="/contact">{user.displayName}</Nav.Link>
-                <h2 onClick={handleLogout}>Logout</h2></> : ''
+              {user ? <><Nav.Link as={HashLink} className='capitalize' to="/profile">{user.displayName}</Nav.Link>
+                <Button onClick={handleLogout} variant="secondary">Logout</Button></> : ''
               }
 
 

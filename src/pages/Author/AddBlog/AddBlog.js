@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useSelector } from 'react-redux';
 
-const AddService = () => {
+const AddBlog = () => {
     const [subCategories, setSubCategories] = useState([]);
     const [category, setCategory] = useState([]);
     const [massage, setMassage] = useState(null);
+    const user = useSelector(state => state.user.currentUser)
 
     const { register, handleSubmit, watch, reset, setError, formState: { errors } } = useForm();
     useEffect(() => {
@@ -17,8 +19,13 @@ const AddService = () => {
         getCategory();
     }, [])
     const onSubmitForm = data => {
+        data.author=user.displayName;
+        data.authorEmail=user.email;
+        const date = new Date();
+        const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        data['postedOn']=date.getDate()+" "+month[date.getMonth()]+" "+date.getFullYear()
         async function postService(data) {
-            await axios.post('https://organic-recipes.herokuapp.com/save-service', data).then(res => {
+            await axios.post('https://organic-recipes.herokuapp.com/save-blog', data).then(res => {
                 setMassage(res.data);
             });
         }
@@ -45,30 +52,32 @@ const AddService = () => {
             <form onSubmit={handleSubmit(onSubmitForm)}>
                 <div className="form-row ">
                     <div className="form-group col-md-6 mx-auto my-3">
-                        <label htmlFor="serviceName">Service Name   {errors.serviceName && <span className="text-danger">  This field is required</span>}</label>
-                        <input type="text" className="form-control" id="serviceName" {...register("serviceName", { required: true })} placeholder="Enter service name.." />
+                        <label htmlFor="blogTitle">Blog Title   {errors.blogTitle && <span className="text-danger">  This field is required</span>}</label>
+                        <input type="text" className="form-control" id="blogTitle" {...register("blogTitle", { required: true })} placeholder="Enter blog title.." />
                     </div>
                     <div className="form-group col-md-6 mx-auto my-3">
-                        <label htmlFor="serviceDescription">Service Description   {errors.serviceDescription && <span className="text-danger">  This field is required</span>}</label>
-                        <textarea type="text" className="form-control" id="serviceDescription" {...register("serviceDescription", { required: true })} placeholder="Enter service Description.." />
+                        <label htmlFor="blogDetails">Blog Details   {errors.blogDetails && <span className="text-danger">  This field is required</span>}</label>
+                        <textarea type="text" className="form-control" id="blogDetails" {...register("blogDetails", { required: true })} placeholder="Enter blog details.." />
                     </div>
                     <div className="form-group col-md-6 mx-auto my-3">
-                        <label htmlFor="serviceType">Choose service type</label>
-                        <select id="role" className="form-control"{...register("serviceType", { required: true })}>
-                            <option value="paid">Paid</option>
-                            <option value="free">free</option>
+                        <label htmlFor="serviceType">Choose Recipe type</label>
+                        <select id="role" className="form-control"{...register("recipeType", { required: true })}>
+                            <option value="Super Easy">Super Easy</option>
+                            <option value="Instant">Instant</option>
+                            <option value="Simple">Simple</option>
+                            <option value="Quick">Quick</option>
                         </select>
                     </div>
                     <div className="form-group col-md-6 mx-auto my-3">
-                        <label htmlFor="cost">Service cost   {errors.cost && <span className="text-danger">  This field is required</span>}</label>
-                        <input type="text" className="form-control" id="cost" {...register("cost", { required: true })} placeholder="Enter service cost.." />
+                        <label htmlFor="cookingTime">Cooking Time   {errors.cookingTime && <span className="text-danger">  This field is required</span>}</label>
+                        <input type="number" className="form-control" id="cookingTime" {...register("cookingTime", { required: true })} placeholder="Enter cooking time.." />
                     </div>
                     <div className="form-group col-md-6 mx-auto my-3">
                         <label htmlFor="categoryName">Choose a category</label>
                         <select id="categoryName" className="form-control"{...register("categoryName", { required: true, onChange: (e) => (handleCategorySelect(e.target.value)) })}>
                         <option value='noCategory'>Select a Category</option>
                             {category.map(ele => (
-                                <option value={ele.categoryName}>{ele.categoryName}</option>
+                                <option key={ele._id} value={ele.categoryName}>{ele.categoryName}</option>
                             ))}
                         </select>
                     </div>
@@ -76,14 +85,14 @@ const AddService = () => {
                         <label htmlFor="subCategoryName">Choose a sub category</label>
                         <select id="subCategoryName" className="form-control"{...register("subCategoryName", { required: true })}>
                             {subCategories.length > 0 ?
-                                subCategories.map((subCategory) => (<option value={subCategory}>{subCategory}</option>)) :
+                                subCategories.map((subCategory,i) => (<option key={i} value={subCategory}>{subCategory}</option>)) :
                                 <option value="noSubCategory">No sub category found</option>
                             }
                         </select>
                     </div>
                     <div className="form-group col-md-6 mx-auto my-3">
                         <label htmlFor="image">Choose banner</label>
-                        <input type="text" className="form-control" id="image" {...register("image", { required: true })} placeholder="Enter service image.." />
+                        <input type="text" className="form-control" id="image" {...register("image", { required: true })} placeholder="Enter blog banner image.." />
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
@@ -94,4 +103,4 @@ const AddService = () => {
     );
 };
 
-export default AddService;
+export default AddBlog;
